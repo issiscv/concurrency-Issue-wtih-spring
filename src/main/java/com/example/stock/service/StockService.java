@@ -21,11 +21,4 @@ public class StockService {
         stock.decrease(quantity);
     }
 
-    private void startTransaction() {
-    }
-
-    private void endTransaction() {
-    }
-
-
 }
