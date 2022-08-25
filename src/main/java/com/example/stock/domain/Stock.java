@@ -3,10 +3,7 @@ package com.example.stock.domain;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @NoArgsConstructor
@@ -20,6 +17,10 @@ public class Stock {
     private Long productId;
 
     private Long quantity;
+    
+    //optimistic lock 에서 사용
+    @Version
+    private Long version;
 
     public Stock(Long productId, Long quantity) {
         this.productId = productId;
